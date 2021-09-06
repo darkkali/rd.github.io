@@ -6,7 +6,7 @@ function random_dominion()
 
   var newList = []
   while(newList.length < 10){
-    var movenum = allnum.splice(Math.floor(Math.random() * list.length),1)[0]
+    var movenum = list.splice(Math.floor(Math.random() * list.length),1)[0]
     newList.push(movenum);
   }
   console.log(newList);
