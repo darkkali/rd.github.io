@@ -24,7 +24,7 @@
 	  while(newList.length < 10){
 	    var movenum = list.splice(Math.floor(Math.random() * list.length),1)[0];
 	    newList.push(movenum);
-		  				document.getElementById("list").innerHTML += movenum;
+		  				document.getElementById("list").innerHTML += '<p>' + movenum + '</p>';
 
 	  }
 	}
