@@ -1,89 +1,240 @@
-
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <body>
+    <input
+      type="button"
+      id="button1"
+      onclick="random_dominion();"
+      style="width: 30vw; height: 5vh"
+      value="기본판"
+    />
+    <input
+      type="button"
+      id="button2"
+      onclick="random_dominion_ex1();"
+      style="width: 30vw; height: 5vh"
+      value="약속된 번영"
+    />
+    <br /><br />
+    <input
+      type="button"
+      id="button3"
+      onclick="aeons_war_eternal();"
+      style="width: 30vw; height: 5vh"
+      value="에이언즈 엔드 : 영원한 전쟁"
+    />
+    <div id="list"></div>
 
+    <script>
+      function random_dominion() {
+        document.getElementById("list").innerHTML = "";
 
-</head>
+        var list = [
+          "개조",
+          "관료",
+          "광산",
+          "대금업자",
+          "대장장이",
+          "도서관",
+          "마을",
+          "민병대",
+          "시장",
+          "실험실",
+          "알현실",
+          "예배당",
+          "저장고",
+          "정원",
+          "작업장",
+          "해자",
+          "회의실",
+          "장인",
+          "선구자",
+          "상인",
+          "밀렵꾼",
+          "보초병",
+          "신하",
+          "노상강도",
+          "마녀",
+          "축제",
+        ];
 
-<body>
-<input type="button" id="button1" onclick="random_dominion();" style="width:30vw; height:5vh;" value="기본판" />
-<input type="button" id="button2" onclick="random_dominion_ex1();" style="width:30vw; height:5vh;" value="약속된 번영" />
-	<br/><br/>
-<input type="button" id="button3" onclick="aeons_war_eternal();" style="width:30vw; height:5vh;" value="에이언즈 엔드 : 영원한 전쟁" />
-  <div id="list"></div>
+        var newList = [];
+        while (newList.length < 10) {
+          var movenum = list.splice(
+            Math.floor(Math.random() * list.length),
+            1
+          )[0];
+          newList.push(movenum);
+          document.getElementById("list").innerHTML += "<p>" + movenum + "</p>";
+        }
+      }
 
-	<script>
-	function random_dominion()
-	{
-				document.getElementById("list").innerHTML = "";
+      function random_dominion_ex1() {
+        document.getElementById("list").innerHTML = "";
 
-	  var list = ["개조", "관료", "광산", "대금업자", "대장장이", "도서관", "마을", "민병대", "시장", "실험실", "알현실", "예배당", "저장고", "정원", "작업장", "해자", "회의실", "장인", "선구자", "상인", "밀렵꾼", "보초병", "신하", "노상강도", "마녀", "축제"];
+        var list = [
+          "개조",
+          "관료",
+          "광산",
+          "대금업자",
+          "대장장이",
+          "도서관",
+          "마을",
+          "민병대",
+          "시장",
+          "실험실",
+          "알현실",
+          "예배당",
+          "저장고",
+          "정원",
+          "작업장",
+          "해자",
+          "회의실",
+          "장인",
+          "선구자",
+          "상인",
+          "밀렵꾼",
+          "보초병",
+          "신하",
+          "노상강도",
+          "마녀",
+        ];
+        var list2 = [
+          "-감시탑",
+          "-궁정",
+          "-교역로",
+          "-밀수품",
+          "-기념 건축물",
+          "-인부촌",
+          "-대장간",
+          "-대규모시장",
+          "-도시",
+          "-지하금고",
+          "-부적",
+          "-불량배",
+          "-비축된 재산",
+          "-약장수",
+          "-왕의 인장",
+          "-은행",
+          "-조폐소",
+          "-주교",
+          "-대금",
+          "-채석장",
+          "-착수금",
+          "-폭도",
+          "-행상인",
+          "-증축",
+          "-회계 사무소",
+        ];
+        list.push(...list2);
+        var newList = [];
+        while (newList.length < 10) {
+          var movenum = list.splice(
+            Math.floor(Math.random() * list.length),
+            1
+          )[0];
+          newList.push(movenum);
+          document.getElementById("list").innerHTML += "<p>" + movenum + "</p>";
+        }
+      }
 
-	  var newList = []
-	  while(newList.length < 10){
-	    var movenum = list.splice(Math.floor(Math.random() * list.length),1)[0];
-	    newList.push(movenum);
-		  				document.getElementById("list").innerHTML += '<p>' + movenum + '</p>';
+      function aeons_war_eternal() {
+        document.getElementById("list").innerHTML = "";
 
-	  }
-	}
-		
-	function random_dominion_ex1()
-	{
-		document.getElementById("list").innerHTML = "";
+        var list_gem = [
+          "(3)동결된 마그마이트",
+          "(3)공포스러운 금강석",
+          "(6)혈석 보석",
+          "(4)외계 물질",
+          "(3)불길한 베릴라이트",
+          "(5)괴이한 주괴",
+          "(4)균열 광석",
+          "(3)화산 유리",
+          "(3)풍뎅이 화석",
+          "(4)화산재 슬러그",
+          "(6)고통의 돌",
+        ];
+        var list_relic = [
+          "(3)콘클라베의 두루마리",
+          "(8)차원 열쇠",
+          "(2)마법사의 토템",
+          "(3)악마 포획기",
+          "(5)별의 입방체",
+          "(6)소용돌이 건틀렛",
+          "(4)원시적 숭배물",
+          "(3)수수께끼 구체",
+          "(3)영원의 부적",
+          "(4)길잡이 나침반",
+        ];
+        var list_spell = [
+          "(5)반응성 오라",
+          "(5)태우기",
+          "(5)서광",
+          "(8)경질화",
+          "(4)굽이치는 번개",
+          "(6)잃은 것 소환",
+          "(4)불꽃 촉발",
+          "(4)재로 돌리기",
+          "(4)염화 쇄도",
+          "(7)평형",
+          "(5)몰아치는 불덩이",
+          "(5)격렬한 폭발",
+          "(2)내면의 불길",
+          "(5)창공의 첨탑",
+          "(3)사역마 구현",
+          "(8)소각",
+          "(4)고열 화살",
+          "(4)탄화",
+          "(6)신성 연마",
+          "(6)공명",
+          "(3)대화재",
+          "(6)전투 촉매",
+          "(7)화염술",
+          "(7)지하의 전송로",
+          "(5)대류장 제어",
+        ];
 
-	  var list = ["개조", "관료", "광산", "대금업자", "대장장이", "도서관", "마을", "민병대", "시장", "실험실", "알현실", "예배당", "저장고", "정원", "작업장", "해자", "회의실", "장인", "선구자", "상인", "밀렵꾼", "보초병", "신하", "노상강도","마녀"];
-	  var list2 = ["-감시탑", "-궁정", "-교역로", "-밀수품", "-기념 건축물", "-인부촌", "-대장간", "-대규모시장", "-도시", "-지하금고", "-부적", "-불량배", "-비축된 재산", "-약장수", "-왕의 인장", "-은행", "-조폐소", "-주교", "-대금", "-채석장", "-착수금", "-폭도", "-행상인", "-증축", "-회계 사무소"];
-		list.push(...list2);
-	  var newList = []
-	  while(newList.length < 10){
-	    var movenum = list.splice(Math.floor(Math.random() * list.length),1)[0];
-	    newList.push(movenum);
-		  				document.getElementById("list").innerHTML += '<p>' + movenum + '</p>';
+        var newList_gem = [];
+        var newList_relic = [];
+        var newList_spell = [];
 
-	  }
-	}
-		
-	function aeons_war_eternal(){
-		
-						document.getElementById("list").innerHTML = "";
+        while (newList_gem.length < 3) {
+          var movenum = list_gem.splice(
+            Math.floor(Math.random() * list_gem.length),
+            1
+          )[0];
+          newList_gem.push(movenum);
+          document.getElementById("list").innerHTML +=
+            '<p style="color:Blueviolet;">' + movenum + "</p>";
+        }
 
-		
-		var list_gem = ["(3)동결된 마그마이트", "(3)공포스러운 금강석", "(6)혈석 보석", "(4)외계 물질", "(3)불길한 베릴라이트", "(5)괴이한 주괴", "(4)균열 광석", "(3)화산 유리", "(3)풍뎅이 화석", "(4)화산재 슬러그", "(6)고통의 돌"];
-		var list_relic = ["(3)콘클라베의 두루마리", "(8)차원 열쇠", "(2)마법사의 토템", "(3)악마 포획기", "(5)별의 입방체", "(6)소용돌이 건틀렛", "(4)원시적 숭배물", "(3)수수께끼 구체", "(3)영원의 부적", "(4)길잡이 나침반"];
-		var list_spell = ["(5)반응성 오라", "(5)태우기", "(5)서광", "(8)경질화","(4)굽이치는 번개", "(6)잃은 것 소환", "(4)불꽃 촉발", "(4)재로 돌리기", "(4)염화 쇄도","(7)평형","(5)몰아치는 불덩이","(5)격렬한 폭발","(2)내면의 불길","(5)창공의 첨탑", "(3)사역마 구현", "(8)소각","(4)고열 화살", "(4)탄화", "(6)신성 연마)", "(6)공명", "(3)대화재", "(6)전투 촉매", "(7)화염술", "(7)지하의 전송로", "(5)대류장 제어"];
-		
-		var newList_gem = [];
-		var newList_relic = [];
-		var newList_spell = [];
-		
-		while(newList_gem.length < 3){
-			var movenum = list_gem.splice(Math.floor(Math.random() * list_gem.length),1)[0];
-			newList_gem.push(movenum);
-			document.getElementById("list").innerHTML += '<p style="color:purple;">' + movenum + '</p>';
+        while (newList_relic.length < 2) {
+          var movenum = list_relic.splice(
+            Math.floor(Math.random() * list_relic.length),
+            1
+          )[0];
+          newList_relic.push(movenum);
+          document.getElementById("list").innerHTML +=
+            '<p style="color:Cornflowerblue;">' + movenum + "</p>";
+        }
 
-	  	}
-		
-		
-		while(newList_relic.length < 2){
-			var movenum = list_relic.splice(Math.floor(Math.random() * list_relic.length),1)[0];
-			newList_relic.push(movenum);
-			document.getElementById("list").innerHTML += '<p style="color:skyblue;">' + movenum + '</p>';
-
-	  	}
-		
-		
-		while(newList_spell.length < 4){
-			var movenum = list_spell.splice(Math.floor(Math.random() * list_spell.length),1)[0];
-			newList_spell.push(movenum);
-			document.getElementById("list").innerHTML += '<p style="color:orange;">' + movenum + '</p>';
-
-	  	}
-	}
-	</script>
-</body>
-
+        while (newList_spell.length < 4) {
+          var movenum = list_spell.splice(
+            Math.floor(Math.random() * list_spell.length),
+            1
+          )[0];
+          newList_spell.push(movenum);
+          document.getElementById("list").innerHTML +=
+            '<p style="color:orange;">' + movenum + "</p>";
+        }
+      }
+    </script>
+  </body>
 </html>
