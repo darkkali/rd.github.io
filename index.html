@@ -27,7 +27,7 @@
       type="button"
       id="button3"
       onclick="aeons_war_eternal();"
-      style="width: 30vw; height: 5vh"
+      style="height: 5vh"
       value="에이언즈 엔드 : 영원한 전쟁"
     />
     <div id="list"></div>
@@ -211,8 +211,8 @@
             1
           )[0];
           newList_gem.push(movenum);
-          document.getElementById("list").innerHTML +=
-            '<p style="color:Blueviolet;">' + movenum + "</p>";
+          // document.getElementById("list").innerHTML +=
+          //   '<p style="color:Blueviolet;">' + movenum + "</p>";
         }
 
         while (newList_relic.length < 2) {
@@ -221,8 +221,8 @@
             1
           )[0];
           newList_relic.push(movenum);
-          document.getElementById("list").innerHTML +=
-            '<p style="color:Cornflowerblue;">' + movenum + "</p>";
+          // document.getElementById("list").innerHTML +=
+          //   '<p style="color:Cornflowerblue;">' + movenum + "</p>";
         }
 
         while (newList_spell.length < 4) {
@@ -231,9 +231,27 @@
             1
           )[0];
           newList_spell.push(movenum);
-          document.getElementById("list").innerHTML +=
-            '<p style="color:orange;">' + movenum + "</p>";
+          // document.getElementById("list").innerHTML +=
+          //   '<p style="color:orange;">' + movenum + "</p>";
         }
+
+        newList_gem = newList_gem.sort();
+        newList_gem.forEach((element) => {
+          document.getElementById("list").innerHTML +=
+            '<p style="color:Blueviolet;">' + element + "</p>";
+        });
+
+        newList_relic = newList_relic.sort();
+        newList_relic.forEach((element) => {
+          document.getElementById("list").innerHTML +=
+            '<p style="color:Cornflowerblue;">' + element + "</p>";
+        });
+
+        newList_spell = newList_spell.sort();
+        newList_spell.forEach((element) => {
+          document.getElementById("list").innerHTML +=
+            '<p style="color:orange;">' + element + "</p>";
+        });
       }
     </script>
   </body>
