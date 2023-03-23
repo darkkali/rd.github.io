@@ -57,7 +57,7 @@
 		var newList_spell = [];
 		
 		while(newList_gem.length < 3){
-			var movenum = list.splice(Math.floor(Math.random() * list_gem.length),1)[0];
+			var movenum = list_gem.splice(Math.floor(Math.random() * list_gem.length),1)[0];
 			newList_gem.push(movenum);
 			document.getElementById("list").innerHTML += '<p>' + movenum + '</p>';
 
@@ -65,7 +65,7 @@
 		
 		
 		while(newList_relic.length < 2){
-			var movenum = list.splice(Math.floor(Math.random() * list_relic.length),1)[0];
+			var movenum = list_relic.splice(Math.floor(Math.random() * list_relic.length),1)[0];
 			newList_relic.push(movenum);
 			document.getElementById("list").innerHTML += '<p>' + movenum + '</p>';
 
@@ -73,7 +73,7 @@
 		
 		
 		while(newList_spell.length < 4){
-			var movenum = list.splice(Math.floor(Math.random() * list_spell.length),1)[0];
+			var movenum = list_spell.splice(Math.floor(Math.random() * list_spell.length),1)[0];
 			newList_spell.push(movenum);
 			document.getElementById("list").innerHTML += '<p>' + movenum + '</p>';
 
