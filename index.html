@@ -22,6 +22,13 @@
       style="width: 30vw; height: 5vh"
       value="약속된 번영"
     />
+     <input
+      type="button"
+      id="button2"
+      onclick="random_dominion_ex1();"
+      style="width: 30vw; height: 5vh"
+      value="장막뒤의 사람들"
+    />
     <br /><br />
     <input
       type="button"
@@ -134,6 +141,105 @@
           "-회계 사무소",
         ];
         list.push(...list2);
+        var newList = [];
+        while (newList.length < 10) {
+          var movenum = list.splice(
+            Math.floor(Math.random() * list.length),
+            1
+          )[0];
+          newList.push(movenum);
+          document.getElementById("list").innerHTML += "<p>" + movenum + "</p>";
+        }
+      }
+
+      function random_dominion_ex2() {
+        document.getElementById("list").innerHTML = "";
+
+        var list = [
+          "개조",
+          "관료",
+          "광산",
+          "대금업자",
+          "대장장이",
+          "도서관",
+          "마을",
+          "민병대",
+          "시장",
+          "실험실",
+          "알현실",
+          "예배당",
+          "저장고",
+          "정원",
+          "작업장",
+          "해자",
+          "회의실",
+          "장인",
+          "선구자",
+          "상인",
+          "밀렵꾼",
+          "보초병",
+          "신하",
+          "노상강도",
+          "마녀",
+        ];
+        var list2 = [
+          "-감시탑",
+          "-궁정",
+          "-교역로",
+          "-밀수품",
+          "-기념 건축물",
+          "-인부촌",
+          "-대장간",
+          "-대규모시장",
+          "-도시",
+          "-지하금고",
+          "-부적",
+          "-불량배",
+          "-비축된 재산",
+          "-약장수",
+          "-왕의 인장",
+          "-은행",
+          "-조폐소",
+          "-주교",
+          "-대금",
+          "-채석장",
+          "-착수금",
+          "-폭도",
+          "-행상인",
+          "-증축",
+          "-회계 사무소",
+        ];
+
+        var list3 = [
+          "=가면무도회",
+          "=개선",
+          "=고문기술자",
+          "=공모자",
+          "=공작",
+          "=교역소",
+          "=광산촌",
+          "=귀족",
+          "=남작",
+          "=다리",
+          "=빈민가",
+          "=사기꾼",
+          "=소원의 우물",
+          "=안마당",
+          "=졸개",
+          "=집사",
+          "=철공소",
+          "=하렘",
+          "=하수인",
+          "=조관",
+          "=외교관",
+          "=잠복자",
+          "=제분소",
+          "=순찰대",
+          "=대체",
+          "=비밀 통로",
+        ];
+        list.push(...list2);
+        list.push(...list3);
         var newList = [];
         while (newList.length < 10) {
           var movenum = list.splice(
